@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="handlebars_offers.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -22,31 +23,31 @@
         </div>
       </header>
       <main>
-        <script type="text/x-handlebars-template" id="recommender">
+        <script type="text/x-handlebars-template" id="offers">
           <ul>
-            {{#each product}}
+            {{#each products}}
             <li>
               <div class="product-wrapper">
-                <div class="image-wrapper"><a href="{{p.url}}"><img
-                      src="{{p.imageUrl}}"
-                      alt="{{p.name}}"
+                <div class="image-wrapper"><a href="{{this.url}}"><img
+                      src="{{this.imageUrl}}"
+                      alt="{{this.name}}"
                     /></a></div>
                 <div class="product-info">
                   <ul>
                     <li>
-                      <p>{{p.name}}</p>
+                      <p>{{this.name}}</p>
                     </li>
                     <li>
-                      <p>{{p.brand}}</p>
+                      <p>{{this.brand}}</p>
                     </li>
                     <li>
-                      <p>{{p.sku}}</p>
+                      <p>{{this.sku}}</p>
                     </li>
                     <li>
-                      <p>{{p.price}}</p>
+                      <p>{{this.price}}</p>
                     </li>
                     <li>
-                      <p>{{p.offerPrice}}</p>
+                      <p>{{this.offerPrice}}</p>
                     </li>
                   </ul>
                 </div>
@@ -59,7 +60,7 @@
       </main>
       <footer>
         <h3>This is a footer</h3>
-        <button onclick="renderOffers">Render Offers</button>
+        <button onclick="renderOffers()">Render Offers</button>
       </footer>
     </div>
   </body>
