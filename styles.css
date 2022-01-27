@@ -7,6 +7,21 @@
   width: 650px;
 }
 
+.headerWrapper div {
+  background-color: black;
+
+}
+
+.headerText {
+  color: white;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.logo img {
+  width: 130px;
+}
+
 .productWrapper {
   display: flex;
   flex-wrap: nowrap;
