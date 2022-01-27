@@ -6,3 +6,21 @@
   margin: auto;
   width: 650px;
 }
+
+.productWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.imageWrapper {
+  width: auto;
+}
+
+.imageWrapper img {
+  max-width: 200px;
+}
+
+.infoWrapper {
+  padding: 1em;
+}

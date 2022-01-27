@@ -24,37 +24,33 @@
       </header>
       <main>
         <script type="text/x-handlebars-template" id="offers">
-          <ul>
+          <div>
             {{#each products}}
-            <li>
-              <div class="product-wrapper">
-                <div class="image-wrapper"><a href="{{this.url}}"><img
-                      src="{{this.imageUrl}}"
-                      alt="{{this.name}}"
-                    /></a></div>
-                <div class="product-info">
-                  <ul>
-                    <li>
-                      <p>{{this.name}}</p>
-                    </li>
-                    <li>
-                      <p>{{this.brand}}</p>
-                    </li>
-                    <li>
-                      <p>{{this.sku}}</p>
-                    </li>
-                    <li>
-                      <p>{{this.price}}</p>
-                    </li>
-                    <li>
-                      <p>{{this.offerPrice}}</p>
-                    </li>
-                  </ul>
+              <div class="productWrapper">
+                <div class="imageWrapper">
+                  <a href={{this.url}}>
+                    <img
+                      src={{this.imageUrl}}
+                    />
+                  </a>
+                </div>
+                <div class="infoWrapper">
+                  <div class="name">
+                    <p>{{this.name}}</p>
+                  </div>
+                  <div class="brand">
+                    <p>{{this.brand}}</p>
+                  </div>
+                  <div class="price">
+                    <p>${{this.price}}</p>
+                  </div>
+                  <div class="offer">
+                    <p>${{this.offerPrice}}</p>
+                  </div>
                 </div>
               </div>
-            </li>
             {{/each}}
-          </ul>
+          </div>
         </script>
         <div id="output"></div>
       </main>
